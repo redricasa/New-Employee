@@ -13,4 +13,6 @@ var empSchema = new mongoose.Schema({
     city: {
         type: String
     }
-})
+});
+
+mongoose.model('Employee', empSchema); 
