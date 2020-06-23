@@ -14,5 +14,5 @@ var empSchema = new mongoose.Schema({
         type: String
     }
 });
-
-mongoose.model('Employee', empSchema); 
+ 
+module.exports = mongoose.model('employee', empSchema);
