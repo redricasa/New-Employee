@@ -31,7 +31,9 @@ router.post('/', (req, res)=>{
     // });   
 // });
 router.get('/', function(req, res) {
-    // res.send("Yep it's working");
-    res.render()
+    // render addOrEdit.hbs
+    res.render("employee/addOrEdit", {
+        viewTitle: "Insert Employee"
+    })
 });  
 module.exports = router; 
