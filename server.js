@@ -4,9 +4,14 @@ const express = require('express');
 const path = require('path');
 const exphbs= require('express-handlebars');
 const employeeController = require('./controllers/employeeController');
+const bodyParser = require('body-parser');
 
 var app = express();
-
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+// convert to JSON
+app.use(bodyParser.json());
 app.set('Views', path.join(__dirname, '/Views/'));
 app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + '/Views/Layouts/' }));
 app.set('view engine', 'hbs');
