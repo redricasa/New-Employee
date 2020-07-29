@@ -13,7 +13,10 @@ app.use(bodyParser.urlencoded({
 // convert to JSON
 app.use(bodyParser.json());
 app.set('Views', path.join(__dirname, '/Views/'));
-app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + '/Views/Layouts/' }));
+app.engine('hbs', exphbs({ 
+    extname: 'hbs', 
+    defaultLayout: 'mainLayout', 
+    layoutsDir: __dirname + '/Views/Layouts/' }));
 app.set('view engine', 'hbs');
 // application server(gate keeper) listening on an open port 3000
 app.listen(3000, () => {
